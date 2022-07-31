@@ -1,6 +1,7 @@
 package net.firecup.mods.techborn;
 
 import com.mojang.logging.LogUtils;
+import net.firecup.mods.techborn.block.ModBlocks;
 import net.firecup.mods.techborn.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -33,6 +34,8 @@ public class Techborn {
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
         ModItems.register(eventBus);
+        ModBlocks.register(eventBus);
+
         eventBus.addListener(this::setup);
         // Register the enqueueIMC method for modloading
 
