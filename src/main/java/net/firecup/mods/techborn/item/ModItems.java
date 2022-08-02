@@ -13,9 +13,11 @@ public class ModItems {
             DeferredRegister.create(ForgeRegistries.ITEMS, Techborn.MOD_ID);
 
     public static final RegistryObject<Item> TITANIUM = ITEMS.register("titanium_ingut",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
     public static final RegistryObject<Item> RAW_TITANIUM = ITEMS.register("raw_titanium",
-            () -> new Item(new Item.Properties().tab(CreativeModeTab.TAB_MISC)));
+            () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
+    public static final RegistryObject<Item> TITANIUM_GEAR = ITEMS.register("titanium_gear",
+            () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
