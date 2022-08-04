@@ -28,6 +28,11 @@ public class Techborn {
     public static final String MOD_ID = "techborn";
    //hello
     private static final Logger LOGGER = LogUtils.getLogger();
+    public double SoulPower(){
+        double SoulPower = 0;
+        SoulPower++;
+        return SoulPower;
+    }
 
     public Techborn() {
 

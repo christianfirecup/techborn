@@ -4,5 +4,6 @@
   "block.techborn.titanium_block": "Titanium Block",
   "block.techborn.titanium_ore": "Titanium Ore",
   "itemGroup.techborn": "TechBorn: The Soul And Technology",
-  "item.techborn.titanium_gear": "Titanium Gear"
+  "item.techborn.titanium_gear": "Titanium Gear",
+  "block.techborn.speed_block": "Speed Block"
 }

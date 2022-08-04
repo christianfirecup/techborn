@@ -18,6 +18,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
     public static final RegistryObject<Item> TITANIUM_GEAR = ITEMS.register("titanium_gear",
             () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
+    public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
+            () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);
