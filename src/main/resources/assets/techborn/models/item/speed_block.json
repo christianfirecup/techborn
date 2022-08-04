@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "techborn:item/speed_block"
+    "all": "techborn:block/speed_block"
   }
 }
