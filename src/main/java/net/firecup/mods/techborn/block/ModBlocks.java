@@ -1,6 +1,7 @@
 package net.firecup.mods.techborn.block;
 
 import net.firecup.mods.techborn.Techborn;
+import net.firecup.mods.techborn.block.custom.ChrisPBlock;
 import net.firecup.mods.techborn.block.custom.SpeedBlock;
 import net.firecup.mods.techborn.item.CreativeTab;
 import net.firecup.mods.techborn.item.ModItems;
@@ -25,6 +26,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> TITANIUM_BLOCK = registerBlock("titanium_block", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
     public static final RegistryObject<Block> TITANIUM_ORE = registerBlock("titanium_ore", () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(9f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
     public static final RegistryObject<Block> SPEED_BLOCK = registerBlock("speed_block", () -> new SpeedBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
+    public static final RegistryObject<Block> CHRIS_BLOCK = registerBlock("chris_block", () -> new ChrisPBlock(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab ){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

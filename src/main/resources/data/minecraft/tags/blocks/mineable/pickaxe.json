@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "techborn:titanium_block",
-    "techborn:titanium_ore"
+    "techborn:titanium_ore",
+    "techborn:chris_block"
+
   ]
 }
