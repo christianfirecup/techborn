@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "titanium",
+  "ingredients": [
+    {
+      "item": "techborn:titanium_block"
+    }
+  ],
+  "result": {
+    "item": "techborn:titanium_ingut",
+    "count": 9
+  }
+}
