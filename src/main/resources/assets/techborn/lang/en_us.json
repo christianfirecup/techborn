@@ -6,5 +6,7 @@
   "itemGroup.techborn": "TechBorn: The Soul And Technology",
   "item.techborn.titanium_gear": "Titanium Gear",
   "block.techborn.speed_block": "Speed Block",
-  "block.techborn.chris_block": "Chris Block"
+  "block.techborn.chris_block": "Chris Block",
+  "item.techborn.techfood": "Titanium Tech Food",
+  "item.techborn.titanium_sword": "Titanium Sword"
 }

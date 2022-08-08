@@ -7,6 +7,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
@@ -20,6 +21,7 @@ import org.slf4j.Logger;
 
 import java.util.stream.Collectors;
 
+
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(Techborn.MOD_ID)
 public class Techborn {
@@ -28,11 +30,7 @@ public class Techborn {
     public static final String MOD_ID = "techborn";
    //hello
     private static final Logger LOGGER = LogUtils.getLogger();
-    public double SoulPower(){
-        double SoulPower = 0;
-        SoulPower++;
-        return SoulPower;
-    }
+
 
     public Techborn() {
 
@@ -46,6 +44,7 @@ public class Techborn {
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
     }
 
     private void setup(final FMLCommonSetupEvent event) {
@@ -53,6 +52,7 @@ public class Techborn {
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
+
 
 
     }
