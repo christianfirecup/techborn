@@ -23,7 +23,7 @@ public class ModItems {
     public static final RegistryObject<Item> TITANIUM_NUGGET = ITEMS.register("titanium_nugget",
             () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
     public static final RegistryObject<Item> TITANIUM_POWER_CORE = ITEMS.register("titanium_power_core",
-            () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN)));
+            () -> new PowerItem(new Item.Properties().tab(CreativeTab.TECHBORN).stacksTo(1), 10000,50,100));
     public static final RegistryObject<Item> TECHFOOD = ITEMS.register("techfood",
             () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN).food(ModFoods.TECHFOOD)));
     public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword",
