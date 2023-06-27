@@ -11,5 +11,7 @@
   "item.techborn.titanium_sword": "Titanium Sword",
   "item.techborn.titanium_pickaxe": "Titanium Pickaxe",
   "tooltip.techborn.poweritem.tooltip": "Energy: %1$d / %2$d FE (%3$.2f%%)",
-  "item.techborn.titanium_power_core": "Titainum Power Core(TPC)"
+  "item.techborn.titanium_power_core": "Titainum Power Core(TPC)",
+  "item.techborn.insane_compound": "Insane Compound",
+  "item.techborn.titanium_nugget": "Titainum Nugget"
 }
