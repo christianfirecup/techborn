@@ -28,12 +28,15 @@ public class ModItems {
     public static final RegistryObject<Item> TITANIUM_POWER_CORE = ITEMS.register("titanium_power_core",
             () -> new PowerItem(new Item.Properties().tab(CreativeTab.TECHBORN).stacksTo(1), 10000,50,100));
     public static final RegistryObject<Item> TECHFOOD = ITEMS.register("techfood",
-            () -> new Item(new Item.Properties().tab(CreativeTab.TECHBORN).food(ModFoods.TECHFOOD)));
+            () -> new TechFood(new Item.Properties().tab(CreativeTab.TECHBORN).food(ModFoods.TECHFOOD)));
     public static final RegistryObject<Item> TITANIUM_SWORD = ITEMS.register("titanium_sword",
             () -> new SwordItem(ModTiers.TITANIUM, 2, 3f, new Item.Properties().tab(CreativeTab.TECHBORN)));
 
     public static final RegistryObject<Item> TITANIUM_PICKAXE = ITEMS.register("titanium_pickaxe",
             () -> new PickaxeItem(ModTiers.TITANIUM, 5, 6f, new Item.Properties().tab(CreativeTab.TECHBORN)));
+
+    public static final RegistryObject<Item> CPICK = ITEMS.register("cpickaxe",
+            () -> new PickaxeItem(ModTiers.INSANECOMPOUND, 5, 6f, new Item.Properties().tab(CreativeTab.TECHBORN)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

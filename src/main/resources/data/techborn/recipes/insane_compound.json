@@ -1,23 +1,21 @@
 {
   "type": "minecraft:crafting_shaped",
-  "group": "ingot",
+  "group": "insanecompound",
   "pattern": [
     " # ",
-    "#p#",
+    "#O#",
     " # "
   ],
   "key": {
     "#": {
       "item": "techborn:titanium_ingut"
     },
-    "key": {
-      "p": {
-        "item": "minecraft:diamond"
-      }
-    },
-    "result": {
-      "item": "techborn:insane_compound",
-      "count": 1
+    "O": {
+      "item": "techborn:titanium_gear"
     }
+  },
+  "result": {
+    "item": "techborn:insane_compound",
+    "count": 1
   }
 }
