@@ -1,0 +1,8 @@
+{
+  "parent": "block/orientable",
+  "textures": {
+    "top": "techborn:block/speed_block",
+    "front": "techborn:block/titanium_block",
+    "side": "techborn:block/titanium_ore"
+  }
+}

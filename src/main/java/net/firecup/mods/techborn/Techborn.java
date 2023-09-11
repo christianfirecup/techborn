@@ -1,5 +1,7 @@
+// The package for the Techborn mod.
 package net.firecup.mods.techborn;
 
+// Importing necessary classes and libraries.
 import com.mojang.logging.LogUtils;
 import net.firecup.mods.techborn.block.ModBlocks;
 import net.firecup.mods.techborn.item.ModItems;
@@ -21,40 +23,39 @@ import org.slf4j.Logger;
 
 import java.util.stream.Collectors;
 
-
-// The value here should match an entry in the META-INF/mods.toml file
+// This annotation indicates that this is a Minecraft mod.
+// The value in the annotation should match an entry in the META-INF/mods.toml file.
 @Mod(Techborn.MOD_ID)
 public class Techborn {
 
-    // Directly reference a slf4j logger
+    // This is a unique identifier for the mod, used in registering mod components.
     public static final String MOD_ID = "techborn";
-   //hello
+
+    // This is a Logger object that will output logs to the console. It's from the slf4j library.
     private static final Logger LOGGER = LogUtils.getLogger();
 
-
-
+    // This is the constructor of the mod class.
     public Techborn() {
 
+        // An instance of the mod event bus is created here. All mod events will be posted to this bus.
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // Registering the mod's items and blocks to the mod event bus.
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
 
+        // Adding a listener for the setup event. This event is called when the mod is being set up.
         eventBus.addListener(this::setup);
-        // Register the enqueueIMC method for modloading
 
-        // Register ourselves for server and other game events we are interested in
+        // Registering the mod itself to the MinecraftForge event bus. This bus posts events related to the Minecraft game itself.
         MinecraftForge.EVENT_BUS.register(this);
-
     }
 
+    // This is a method that will be called when the mod is setting up.
+    // It's an example of a FML life-cycle event, specifically the common setup event.
     private void setup(final FMLCommonSetupEvent event) {
-        // Some preinit code
+        // Some pre-initialization code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
-
-
-
-    }
-
+}
