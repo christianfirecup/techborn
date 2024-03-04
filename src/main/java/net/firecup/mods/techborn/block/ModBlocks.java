@@ -4,6 +4,7 @@ package net.firecup.mods.techborn.block;
 // Importing necessary classes and libraries.
 import net.firecup.mods.techborn.Techborn;
 import net.firecup.mods.techborn.block.custom.SpeedBlock;
+import net.firecup.mods.techborn.block.custom.TeleportBlock;
 import net.firecup.mods.techborn.item.CreativeTab;
 import net.firecup.mods.techborn.item.ModItems;
 import net.minecraft.world.item.BlockItem;
@@ -36,6 +37,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> CHRIS_BLOCK = registerBlock("chris_block", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
     public static final RegistryObject<Block> FIRST_CORE_BLOCK = registerBlock("core_first", () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(3f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
 
+public static final RegistryObject<Block> TELEPORT_BLOCK = registerBlock("teleport_block", () -> new TeleportBlock(BlockBehaviour.Properties.of(Material.METAL).strength(3f).requiresCorrectToolForDrops()), CreativeTab.TECHBORN);
     // Method to register the block and its item form.
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab ){
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

@@ -3,6 +3,7 @@ package net.firecup.mods.techborn;
 
 // Importing necessary classes and libraries.
 import com.mojang.logging.LogUtils;
+import net.firecup.mods.techborn.block.ModBlockEntity;
 import net.firecup.mods.techborn.block.ModBlocks;
 import net.firecup.mods.techborn.item.ModItems;
 import net.minecraft.world.level.block.Block;
@@ -43,6 +44,7 @@ public class Techborn {
         // Registering the mod's items and blocks to the mod event bus.
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
+        ModBlockEntity.register(eventBus);
 
         // Adding a listener for the setup event. This event is called when the mod is being set up.
         eventBus.addListener(this::setup);
