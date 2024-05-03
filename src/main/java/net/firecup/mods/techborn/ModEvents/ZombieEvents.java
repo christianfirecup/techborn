@@ -14,7 +14,7 @@ public class ZombieEvents {
     private static int amounttospawn;
 
     @SubscribeEvent(priority = EventPriority.LOW)
-     public static void ZombieSpawns(EntityJoinWorldEvent event) {
+     public static void ZombieSpawns(EntityJoinWorldEvent event ) {
 
 
         // Assuming we want to spawn a zombie for every entity except for Zombie to avoid an infinite loop
