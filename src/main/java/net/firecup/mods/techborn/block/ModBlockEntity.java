@@ -15,6 +15,7 @@ public class ModBlockEntity {
 
 
         public static final RegistryObject<BlockEntityType<TeleportBlockEntity>> Teleporter = BLOCK_ENT.register("teleport_block", () -> BlockEntityType.Builder.of(TeleportBlockEntity::new, ModBlocks.TELEPORT_BLOCK.get()).build(null));
+
     public static void register(IEventBus eventBus){
         BLOCK_ENT.register(eventBus);
     }

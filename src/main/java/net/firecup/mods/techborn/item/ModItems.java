@@ -37,6 +37,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> CPICK = ITEMS.register("cpickaxe",
             () -> new PickaxeItem(ModTiers.INSANECOMPOUND, 5, 6f, new Item.Properties().tab(CreativeTab.TECHBORN)));
+    public static final RegistryObject<Item> INSANECOMPOUND_SWORD = ITEMS.register("insane_sword",
+            () -> new SwordItem(ModTiers.INSANECOMPOUND, 9, 3f, new Item.Properties().tab(CreativeTab.TECHBORN)));
 
     public static void register(IEventBus eventBus){
         ITEMS.register(eventBus);

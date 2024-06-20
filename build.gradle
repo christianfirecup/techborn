@@ -124,6 +124,7 @@ sourceSets.main.resources { srcDir 'src/generated/resources' }
 
 dependencies {
     implementation 'se.eris:notnull-instrumenter-maven-plugin:1.1.1'
+    implementation 'org.jetbrains:annotations:24.0.0'
 
     // Specify the version of Minecraft to use. If this is any group other than 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency, and its patches will be applied.
