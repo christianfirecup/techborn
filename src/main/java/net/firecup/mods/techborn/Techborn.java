@@ -5,6 +5,7 @@ package net.firecup.mods.techborn;
 import com.mojang.logging.LogUtils;
 import net.firecup.mods.techborn.block.ModBlockEntity;
 import net.firecup.mods.techborn.block.ModBlocks;
+import net.firecup.mods.techborn.features.ModConfigedFeatures;
 import net.firecup.mods.techborn.item.ModItems;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -40,7 +41,7 @@ public class Techborn {
 
         // An instance of the mod event bus is created here. All mod events will be posted to this bus.
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
-
+        MinecraftForge.EVENT_BUS.addListener(ModConfigedFeatures::onBiomeLoadingEvent);
         // Registering the mod's items and blocks to the mod event bus.
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
@@ -53,11 +54,16 @@ public class Techborn {
         MinecraftForge.EVENT_BUS.register(this);
     }
 
+
     // This is a method that will be called when the mod is setting up.
     // It's an example of a FML life-cycle event, specifically the common setup event.
     private void setup(final FMLCommonSetupEvent event) {
         // Some pre-initialization code
         LOGGER.info("HELLO FROM PREINIT");
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        event.enqueueWork(() -> {
+            ModConfigedFeatures.registerOreFeatures();
+        });
+
     }
 }
